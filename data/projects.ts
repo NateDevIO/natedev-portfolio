@@ -18,21 +18,21 @@ export const projects: Project[] = [
     slug: "revenue-intel",
     name: "Revenue Intel",
     tagline: "Lifecycle Analytics",
-    description: "AI-powered revenue intelligence platform for SaaS businesses with churn prediction, customer analytics, and revenue forecasting.",
-    tech: ["Next.js 14", "TypeScript", "Tailwind CSS", "Python", "FastAPI", "DuckDB", "XGBoost", "Recharts", "Claude API", "SHAP"],
+    description: "AI-powered revenue intelligence platform for SaaS businesses with multi-model predictive analytics, real-time Claude AI insights across every dashboard, Monte Carlo scenario simulation, and customer-level natural language Q&A.",
+    tech: ["Next.js 14", "TypeScript", "Tailwind CSS", "Python", "FastAPI", "DuckDB", "XGBoost", "Claude Sonnet 4.5", "SHAP", "scikit-learn", "SciPy", "Recharts"],
     liveUrl: "https://revenue-intel.vercel.app",
     githubUrl: "https://github.com/NateDevIO/revenue-intel-saas",
     image: "/projects/revenue-intel-ss.png",
     featured: true,
     category: "Data Science",
     features: [
-      "XGBoost-powered churn prediction with SHAP interpretability for transparent, explainable risk scoring",
-      "Full-stack architecture with FastAPI backend serving ML models and DuckDB for high-performance OLAP analytics",
-      "AI-generated strategic insights via Claude API for customer health narratives and retention recommendations",
-      "Interactive revenue forecasting dashboard with cohort analysis, MRR tracking, and lifecycle stage visualization",
-      "Customer segmentation analytics with behavioral clustering and actionable intervention triggers"
+      "Real-time Claude Sonnet 4.5 insights on 5 dashboards — executive briefings, risk analysis, funnel coaching, scenario guidance, and revenue narratives with natural language customer Q&A",
+      "Multi-model predictive stack: XGBoost churn prediction with SHAP explainability, Logistic Regression for expansion propensity, and Random Forest deal scoring",
+      "Monte Carlo simulation engine with triangular distributions and confidence intervals for what-if scenario planning across churn, conversion, expansion, and pricing levers",
+      "Weighted multi-factor health scoring (Usage 35%, Engagement 25%, Sentiment 20%, Financial 20%) with component-level drill-down and intervention triggers",
+      "Full-stack architecture with FastAPI serving ML models, DuckDB for high-performance OLAP analytics, and SaaS industry benchmarking against median NRR, LTV:CAC, and CAC payback"
     ],
-    challenges: "The project addressed complex challenges including building a performant OLAP analytics pipeline with DuckDB for real-time aggregation across large SaaS datasets, integrating XGBoost churn models with SHAP explainability to surface the specific factors driving each customer's risk score, orchestrating FastAPI microservices for concurrent ML inference and data processing, implementing Claude API integration for generating contextual business narratives from raw analytics data, designing cohort-based revenue forecasting with proper handling of expansion, contraction, and churned MRR components, and creating a responsive analytics dashboard that presents complex multi-dimensional data in an intuitive format for non-technical stakeholders."
+    challenges: "The project addressed complex challenges including orchestrating real-time Claude AI insights across five analytical dashboards with context-aware prompts tailored to each page's data, building a multi-model ML pipeline spanning XGBoost churn prediction, Logistic Regression expansion scoring, and Random Forest deal probability, implementing a Monte Carlo simulation engine with 1000+ iterations and triangular distributions for robust revenue forecasting with confidence intervals, designing a weighted health scoring system that synthesizes usage telemetry, engagement signals, NPS sentiment, and financial indicators into actionable risk tiers, and building a performant OLAP analytics pipeline with DuckDB for real-time aggregation across large SaaS datasets."
   },
   {
     slug: "readmit-risk",
