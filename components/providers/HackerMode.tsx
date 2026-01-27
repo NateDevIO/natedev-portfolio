@@ -23,6 +23,16 @@ export default function HackerMode() {
     toastTimer.current = setTimeout(() => setToast(false), duration)
   }, [])
 
+  const toggle = useCallback(() => {
+    setActive(prev => {
+      const next = !prev
+      document.documentElement.classList.toggle('hacker', next)
+      document.documentElement.classList.toggle(hackerFont.variable, next)
+      return next
+    })
+    showToast(3000)
+  }, [showToast])
+
   useEffect(() => {
     const handleKeyDown = (e: KeyboardEvent) => {
       const buf = [...inputRef.current, e.key].slice(-KONAMI_CODE.length)
@@ -31,18 +41,19 @@ export default function HackerMode() {
       if (buf.length === KONAMI_CODE.length &&
           buf.every((k, i) => k === KONAMI_CODE[i])) {
         inputRef.current = []
-        setActive(prev => {
-          const next = !prev
-          document.documentElement.classList.toggle('hacker', next)
-          document.documentElement.classList.toggle(hackerFont.variable, next)
-          return next
-        })
-        showToast(3000)
+        toggle()
       }
     }
     document.addEventListener('keydown', handleKeyDown)
     return () => document.removeEventListener('keydown', handleKeyDown)
-  }, [showToast])
+  }, [toggle])
+
+  // Listen for custom toggle event (mobile tap trigger)
+  useEffect(() => {
+    const handleToggle = () => toggle()
+    document.addEventListener('hacker-mode-toggle', handleToggle)
+    return () => document.removeEventListener('hacker-mode-toggle', handleToggle)
+  }, [toggle])
 
   if (!toast) return null
 

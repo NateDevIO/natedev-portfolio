@@ -1,6 +1,6 @@
 'use client'
 
-import { useState, useEffect } from 'react'
+import { useState, useEffect, useRef } from 'react'
 import Link from 'next/link'
 import { motion, AnimatePresence } from 'framer-motion'
 import { Menu, X } from 'lucide-react'
@@ -15,6 +15,19 @@ const navItems = [
 
 export default function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
+  const tapCount = useRef(0)
+  const tapTimer = useRef<ReturnType<typeof setTimeout>>()
+
+  const handleLogoTap = () => {
+    tapCount.current++
+    clearTimeout(tapTimer.current)
+    if (tapCount.current >= 7) {
+      tapCount.current = 0
+      document.dispatchEvent(new Event('hacker-mode-toggle'))
+    } else {
+      tapTimer.current = setTimeout(() => { tapCount.current = 0 }, 2000)
+    }
+  }
 
   useEffect(() => {
     const handleKeyDown = (e: KeyboardEvent) => {
@@ -33,6 +46,7 @@ export default function Header() {
           {/* Logo */}
           <Link
             href="/"
+            onClick={handleLogoTap}
             className="text-xl font-bold tracking-tight hover:text-accent transition-colors"
           >
             <span className="gradient-text">NateDev</span>
