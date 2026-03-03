@@ -38,8 +38,8 @@ export const projects: Project[] = [
     slug: "readmit-risk",
     name: "ReadmitRisk",
     tagline: "Hospital Readmission Prevention Platform",
-    description: "A full-stack care management platform that identifies high-risk patients and prioritizes post-discharge interventions to reduce preventable hospital readmissions.",
-    tech: ["Next.js 14", "TypeScript", "Tailwind CSS", "Python", "scikit-learn", "Pandas", "Google BigQuery", "Recharts"],
+    description: "A full-stack care management platform that identifies high-risk patients and prioritizes post-discharge interventions to reduce preventable hospital readmissions. Includes a remote MCP server on Railway so AI assistants can query patient risk data and run live ML predictions conversationally.",
+    tech: ["Next.js 14", "TypeScript", "Tailwind CSS", "Python", "scikit-learn", "Pandas", "Google BigQuery", "Recharts", "MCP", "Railway"],
     liveUrl: "https://readmit-risk.vercel.app",
     githubUrl: "https://github.com/NateDevIO/readmit-risk",
     image: "/projects/readmit-risk-ss.png",
@@ -50,7 +50,8 @@ export const projects: Project[] = [
       "Gradient Boosting classifier with SMOTE oversampling to handle severe class imbalance (8.8% → 50% positive class)",
       "61-feature clinical model with demographic normalization and comprehensive feature importance analysis",
       "Interactive care management dashboard with risk stratification tiers (60%, 70%, 80% thresholds) and cost estimation",
-      "Real-time data visualizations using Recharts with ROC-AUC curves, precision-recall metrics, and intervention tracking"
+      "Real-time data visualizations using Recharts with ROC-AUC curves, precision-recall metrics, and intervention tracking",
+      "Remote MCP server deployed on Railway exposing 7 tools (patient risk lookup, live ML predictions, hospital metrics) that any AI assistant can call via SSE transport"
     ],
     challenges: "The project tackled significant ML challenges including handling severe class imbalance in readmission data using SMOTE oversampling, extracting and processing 211K ICU admissions from Google BigQuery with PhysioNet credentials, engineering 61 clinical features from raw MIMIC-IV data while maintaining HIPAA-compliant practices, implementing configurable probability thresholds for different risk tolerance levels, integrating multiple heterogeneous data sources (MIMIC-IV, UCI, CMS) with different schemas and feature sets, and building an intuitive care management interface that translates complex ML outputs into actionable clinical insights with cost-benefit analysis."
   },

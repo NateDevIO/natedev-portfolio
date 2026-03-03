@@ -19,7 +19,7 @@ const skillCategories = [
   },
   {
     name: 'Data & AI',
-    skills: ['Pandas', 'NumPy', 'Scikit-learn', 'XGBoost', 'SHAP', 'Streamlit', 'OpenAI API', 'Claude API', 'Gemini API', 'D3.js'],
+    skills: ['Pandas', 'NumPy', 'Scikit-learn', 'XGBoost', 'SHAP', 'Streamlit', 'OpenAI API', 'Claude API', 'Gemini API', 'MCP', 'D3.js'],
   },
   {
     name: 'Databases',
@@ -27,7 +27,7 @@ const skillCategories = [
   },
   {
     name: 'Tools & DevOps',
-    skills: ['Git', 'Vercel', 'Docker', 'GitHub Actions', 'Maven', 'VS Code'],
+    skills: ['Git', 'Vercel', 'Railway', 'Docker', 'GitHub Actions', 'Maven', 'VS Code'],
   },
 ]
 
