@@ -123,6 +123,19 @@ export default async function ProjectPage({ params }: Props) {
               </section>
             )}
 
+            {project.architecture && project.architecture.length > 0 && (
+              <section>
+                <h2 className="text-2xl font-semibold mb-4">System Architecture</h2>
+                <ol className="space-y-3 text-muted-foreground list-decimal list-inside">
+                  {project.architecture.map((step, index) => (
+                    <li key={index} className="leading-relaxed">
+                      {step}
+                    </li>
+                  ))}
+                </ol>
+              </section>
+            )}
+
             {project.challenges && (
               <section>
                 <h2 className="text-2xl font-semibold mb-4">Challenges & Solutions</h2>
