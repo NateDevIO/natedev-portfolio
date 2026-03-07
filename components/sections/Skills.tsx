@@ -15,7 +15,7 @@ const skillCategories = [
   },
   {
     name: 'Backend & Cloud',
-    skills: ['AWS', 'Node.js', 'Express', 'FastAPI', 'Flask', 'REST APIs'],
+    skills: ['AWS', 'Node.js', 'Express', 'FastAPI', 'Flask', 'REST APIs', 'SSE'],
   },
   {
     name: 'Data & AI',
